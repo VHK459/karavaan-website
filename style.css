@@ -1,0 +1,236 @@
+html {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(10, 4, 12);
+   
+}
+
+.wrapper {
+    position: relative;
+    font-family: 'Monoton', cursive;
+}
+nav {
+    top:2px;
+}
+.fest {
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+
+}
+
+.name-placement {
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    left:22vw;
+    top:20vw;
+    color: rgb(194, 201, 236);
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+      text-shadow: 2px 3px 3px hsla(0, 35%, 70%, 0.7);
+
+}
+
+p.text{
+    font-size: 5vw;
+    margin-top: -2%;
+    margin-bottom:-2%;
+}
+
+
+p.date{
+ font-size: 1.5vw;
+ margin-bottom: 0;
+ text-align: left;
+}
+
+p.venue{
+ font-size: 2vw;
+ margin-top: 0;
+ text-align: right;
+}
+
+
+
+a { 
+    color: aliceblue;
+    text-decoration: none;
+}
+.rows {
+    
+    font-size: 2.5vw;
+    display: flex;
+    justify-content: right;
+    gap:10vw;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+
+}
+
+
+
+.logo {
+    position: sticky;
+    top: 5px;
+    left:5px;
+    font-size: larger;
+    margin-right: auto;
+    align-self: flex-start;
+    overflow: hidden;
+}
+
+.wrap {  
+ 
+    height: 60vw;  
+    background-color: transparent;  
+    color: black;  
+    padding-bottom: 10vw;  
+    margin: 0;
+}  
+
+
+
+section.about {
+    display: flex;
+    gap: 10vw;
+    justify-content:space-around;
+    align-items: center;
+  }
+  
+  div.aboutimg {
+    height: 40vw;
+    width: 39vw;
+    background:transparent url("Retro-Eva.jpg") no-repeat center;
+    background-size: contain; 
+  }
+  
+  div.abouttext {
+    color: rgb(194, 201, 236);
+    height: 40vw;
+    width: 39vw;
+    background-color: rgb(10, 4, 12);
+    overflow: hidden;
+ 
+  }
+  
+
+
+  .about {
+    font-size: 2vw;
+  }
+.spon {
+  color:azure;
+  font-size: 4vw;
+  text-align: center;
+}
+.spon-cover {
+  display: flex;
+    flex-wrap: wrap;
+      justify-content: center;
+}
+
+.spon-cover div > img {
+  width: 26vw;
+  aspect-ratio: 1;
+  object-fit: contain;
+  padding-bottom: 3%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .footer {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 3vw;
+    background-color: rgba(53, 50, 47, 0.642);
+    gap: 10px;
+    margin-top: clamp(2rem,5vw,3rem);
+ 
+  }
+    .footer p{
+      font-size: 0.7vw;
+      margin: 0;
+      text-align: center;
+      color: rgb(222, 207, 207);
+    }
+
+
+
+  .logos{
+  padding: 0;
+  margin: 0;
+  }
+
+  .cover{
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    padding: 0;
+    margin: 0;
+  }
+
+  .coords {
+    align-self: center;
+    width: 35vw
+  }
+
+
+  .cover-2{
+    display: flex;
+    justify-content: space-between;
+    gap: 5vw;
+    padding: 5vw 5vw;
+
+    
+  }
+
+  .coords > p {
+    text-align: left;
+  }
+
+  .address p{
+    width: 35vw;
+    text-align:left;
+ 
+  }
+
+
+
+
+
+  .cover img {
+
+    object-fit: contain;
+    overflow: hidden;
+    width: clamp(0.5rem, 6rem,3vw);
+  }
+
+
+
+  .cover img:hover{
+    transition: transform .1s ease-in;
+    transform: scale(1.1);
+
+        
+ }
+
+ .us  {
+  width : 2rem;
+
+ }
