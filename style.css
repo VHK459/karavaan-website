@@ -1,16 +1,27 @@
 html {
-    margin: 0;
+
+    margin: 0px;
     padding: 0;
+    max-width: 100vw;
     background-color: rgb(10, 4, 12);
    
 }
 
+body {
+  margin:0;
+  padding:0;
+  overflow-x: hidden;
+}
 .wrapper {
+  top:0;
+  right:0;
     position: relative;
     font-family: 'Monoton', cursive;
+    width:100%;
 }
 nav {
     top:2px;
+    right:0;
 }
 .fest {
     width: 100%;
@@ -96,6 +107,7 @@ a {
 
 
 section.about {
+
     display: flex;
     gap: 10vw;
     justify-content:space-around;
@@ -103,6 +115,7 @@ section.about {
   }
   
   div.aboutimg {
+    z-index: 5;
     height: 40vw;
     width: 39vw;
     background:transparent url("Retro-Eva.jpg") no-repeat center;
@@ -110,6 +123,7 @@ section.about {
   }
   
   div.abouttext {
+  z-index: -2;
     color: rgb(194, 201, 236);
     height: 40vw;
     width: 39vw;
@@ -118,10 +132,17 @@ section.about {
  
   }
   
+  #zindexup{
+    z-index: -5;
+  }
 
 
   .about {
     font-size: 2vw;
+  }
+
+  .sponsors{
+    z-index: 1000;
   }
 .spon {
   color:azure;
@@ -129,6 +150,7 @@ section.about {
   text-align: center;
 }
 .spon-cover {
+
   display: flex;
     flex-wrap: wrap;
       justify-content: center;
@@ -140,9 +162,15 @@ section.about {
   object-fit: contain;
   padding-bottom: 3%;
 
+
 }
 
 
+
+.spon-cover div > img:hover {
+  scale: 105%;
+  transition:all 0.2s ease-in-out;
+}
 
 
 
@@ -160,6 +188,7 @@ section.about {
     padding-top: 3vw;
     background-color: rgba(53, 50, 47, 0.642);
     gap: 10px;
+    overflow-x: hidden;
     margin-top: clamp(2rem,5vw,3rem);
  
   }
@@ -234,3 +263,70 @@ section.about {
   width : 2rem;
 
  }
+
+
+
+.aboutus{
+  opacity: 0;
+  text-align: center;
+  filter: blur(5px);
+      transform: translateX(+100%);
+    transition: all 1s;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+      transform: translateX(-100%);
+    transition: all 1s;
+}
+
+
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0);
+}
+
+
+/* code for blob*/
+#blob {
+  overflow: hidden;
+    z-index: -2;
+    background-color: white;
+    height: 30vw;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(
+        to right,
+        aquamarine,
+        mediumpurple
+    );
+
+    animation: rotate 20s infinite;
+    filter: blur(12vw);
+
+ 
+
+}
+
+@keyframes rotate {
+        from {
+            rotate: 0deg;
+
+        }
+
+        50% {
+            scale: 1.3 1.1;
+        }
+
+        to {
+            rotate: 360deg;
+        }
+        
+    }
