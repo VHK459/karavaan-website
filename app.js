@@ -20,7 +20,8 @@ hiddenElements.forEach((el) => observer.observe(el))
 
 
 
-
+let width = window.innerWidth
+console.log(width)
 
 
 
@@ -31,10 +32,12 @@ let blobb = document.querySelector("#blob");
 
 
 $(document).on('pointermove', function(e){
+
     $('#blob').animate({
        left:  e.pageX,
-       top:   e.pageY
-    },{ duration: 3, fill: "forwards"});
+       top:   e.pageY,
+    },{ duration: 3, fill: "forwards"})
+
 });
 
 
