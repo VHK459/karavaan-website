@@ -59,10 +59,7 @@ $(blobb).animate({
 
 else {
 
-$('#blob').css({
-    "height":0,
-    "width":0,
-})
+$('#blob').hidden()
 
 console.log(
     'success'
