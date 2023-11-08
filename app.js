@@ -21,7 +21,7 @@ hiddenElements.forEach((el) => observer.observe(el))
 
 
 let width = window.innerWidth
-console.log(width)
+
 
 
 
@@ -30,7 +30,7 @@ console.log(width)
 // for blob
 let blobb = document.querySelector("#blob");
 
-
+if (!window.matchMedia("(pointer: coarse)").matches) {
 $(document).on('pointermove', function(e){
 
     $('#blob').animate({
@@ -53,3 +53,37 @@ $(blobb).animate({
         height: 30 + 'vw',
     })
 })
+
+    
+}
+
+else {
+
+$('#blob').css({
+    "height":0,
+    "width":0,
+})
+
+console.log(
+    'success'
+)
+}
+
+
+const container = document.querySelector(".container");
+const primaryNav = document.querySelector(".nav__list");
+const toggleButton = document.querySelector(".nav-toggle");
+
+toggleButton.addEventListener("click", () => {
+    const isExpanded = primaryNav.getAttribute("aria-expanded");
+    primaryNav.setAttribute(
+        "aria-expanded",
+        isExpanded === "false" ? "true" : "false"
+    );
+});
+
+container.addEventListener("click", (e) => {
+    if (!primaryNav.contains(e.target) && !toggleButton.contains(e.target)) {
+        primaryNav.setAttribute("aria-expanded", "false");
+    }
+});
