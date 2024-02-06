@@ -198,7 +198,7 @@ a {
         padding: 5px 1px 5px 1px;
         margin-inline: var(--space-1);
         top: 11vw;
-        
+        z-index: 1000;
         position: absolute;
         grid-auto-rows: 1rem;
         background-color: #ffffff00;
